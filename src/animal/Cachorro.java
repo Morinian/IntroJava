@@ -1,15 +1,15 @@
 package animal;
 
-public class Cachorro {
-    //atributos
+public class Cachorro extends Animal {
 
+    //atributos
     static int numeroDeCachorros;
-    private String nome;
-    private String cor;
-    private int altura;
-    private double peso;
+    //    private String nome;
+    //    private String cor;
+    //    private int altura;
+    //    private double peso;
     private int tamanhoDoRabo;
-    private  String estadoDeEspirito;
+    //    private  String estadoDeEspirito;
 
     public String getNome(){
         return  this.nome;
@@ -50,10 +50,6 @@ public class Cachorro {
         this.tamanhoDoRabo = tamanhoDoRabo;
     }
 
-    public String getEstadoDeEspirito() {
-        return estadoDeEspirito;
-    }
-
     @Override
     public String toString() {
         return "Cachorro{" +
@@ -62,16 +58,14 @@ public class Cachorro {
     }
 
     //Construtores  - o que executa a construção do seu objeto
-    public  Cachorro(){
-
-    }
-    public Cachorro(String nome, String cor, int altura, double peso, int tamanhoDoRabo, String estadoDeEspirito) {
+    public Cachorro(String nome, String cor, int altura, double peso, int tamanhoDoRabo, String estadoEspirito) {
+        super(nome,cor,altura,peso,estadoEspirito);
         this.nome = nome;
         this.cor = cor;
         this.altura = altura;
         this.peso = peso;
         this.tamanhoDoRabo = tamanhoDoRabo;
-        this.estadoDeEspirito = estadoDeEspirito;
+        this.estadoEspirito = estadoEspirito;
 
         numeroDeCachorros ++;
     }
@@ -98,12 +92,12 @@ public class Cachorro {
 
     public String interagir(String acao){
         switch (acao){
-            case "carinho": this.estadoDeEspirito = "feliz"; break;
-            case "vai dormir": this.estadoDeEspirito = "bravo"; break;
-            case "pisar na patinha": this.estadoDeEspirito = "triste"; break;
-            default: this.estadoDeEspirito = "Neutro"; break;
+            case "carinho": this.estadoEspirito = "feliz"; break;
+            case "vai dormir": this.estadoEspirito = "bravo"; break;
+            case "pisar na patinha": this.estadoEspirito = "triste"; break;
+            default: this.estadoEspirito = "Neutro"; break;
         }
-        return estadoDeEspirito;
+        return estadoEspirito;
     }
 
 }
