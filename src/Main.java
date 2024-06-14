@@ -1,3 +1,4 @@
+import Lojas.Petshop;
 import animal.Cachorro;
 import animal.Gato;
 
@@ -10,7 +11,19 @@ public class Main {
 
         Gato gato1 = new Gato("Pingo","Marrom",30,5.5,"nada");
 
+        cachorro2.soar();
+        gato1.soar();
 
+        Petshop petshop = new Petshop();
+
+        petshop.darBanho(cachorro1);
+        System.out.println(cachorro1.getEstadoEspirito());
+
+        petshop.darBanho(gato1);
+        System.out.println(gato1.getEstadoEspirito());
+
+        petshop.tosar(cachorro2);
+        System.out.println(cachorro2.getEstadoEspirito());
 
         /*cachorro1.setNome("Puppy");
         cachorro1.setCor("Marrom");

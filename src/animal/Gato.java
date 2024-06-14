@@ -14,4 +14,9 @@ public class Gato extends Animal{
                 "nome='" + nome + '\'' +
                 '}';
     }
+
+    @Override
+    public void soar(){
+        System.out.println("miau miau!!");
+    }
 }

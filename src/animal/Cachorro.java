@@ -100,4 +100,8 @@ public class Cachorro extends Animal {
         return estadoEspirito;
     }
 
+    @Override
+    public void soar(){
+        System.out.println("AU AU!!");
+    }
 }
